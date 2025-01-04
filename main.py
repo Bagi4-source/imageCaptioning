@@ -15,6 +15,9 @@ tokenizer = AutoTokenizer.from_pretrained(model_path)
 
 
 def generate_caption(_image: Image):
+    if _image.mode != 'RGB':
+        _image = _image.convert('RGB')
+
     pixel_values = image_processor(images=_image,
                                    return_tensors="pt").pixel_values
     output_ids = model.generate(pixel_values,
@@ -27,7 +30,7 @@ def generate_caption(_image: Image):
 
 
 images = [Image.open(f"images/{x}") for x in os.listdir("images")]
-for i, image in enumerate(images):
+for image in images:
     generated_caption = generate_caption(image)
     translated = translator.translate(generated_caption)
-    print(f"Описание картинки [{i}]:", translated)
+    print(f"Описание картинки [{image.filename}]:", translated)
