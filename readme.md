@@ -1,7 +1,8 @@
-
 ## Описание
 
-Этот проект предназначен для генерации подписей к изображениям с последующим переводом на русский язык. Он использует модель `VisionEncoderDecoderModel` из библиотеки `transformers` для генерации описаний и `GoogleTranslator` из `deep-translator` для перевода.
+Этот проект предназначен для генерации подписей к изображениям с последующим переводом на русский язык. Он использует
+модель `VisionEncoderDecoderModel` из библиотеки `transformers` для генерации описаний и `GoogleTranslator`
+из `deep-translator` для перевода.
 
 ## Установка
 
@@ -27,6 +28,22 @@
    ```bash
    pip install -r requirements.txt
    ```
+
+## Docker
+
+1. **Сборка**
+
+```bash
+docker build -t image-captioning -f Dockerfile .
+```
+
+2. **Запуск**
+
+docker run -v <путь к папке с картинками>:/app/images image-captioning
+
+```bash
+docker run -v images:/app/images image-captioning
+```
 
 ## Использование
 
