@@ -1,4 +1,3 @@
-import os
 import threading
 from tkinter import Tk, Button, Label, Text, filedialog
 
@@ -80,10 +79,7 @@ class ImageCaptioning:
         file_path = filedialog.askopenfilename(
             title="Выберите изображение",
             filetypes=[
-                ("JPEG Files", "*.jpeg"),
-                ("JPG Files", "*.jpg"),
-                ("PNG Files", "*.png"),
-                ("WEBP Files", "*.webp"),
+                ("Image Files", "*.jpeg *.jpg *.png *.webp"),
                 ("All Files", "*.*")
             ],
         )

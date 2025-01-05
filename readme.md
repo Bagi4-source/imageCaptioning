@@ -4,6 +4,10 @@
 модель `VisionEncoderDecoderModel` из библиотеки `transformers` для генерации описаний и `GoogleTranslator`
 из `deep-translator` для перевода.
 
+## Пример приложения
+
+![sample1.png](assets%2Fsample1.png)
+
 ## Установка
 
 1. **Клонируйте репозиторий:**

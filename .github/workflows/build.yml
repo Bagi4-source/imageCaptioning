@@ -24,7 +24,7 @@ jobs:
     - name: Cache Python packages
       uses: actions/cache@v3
       with:
-        path: ~/.cache/pip
+        path: c:\users\runneradmin\appdata\local\pip
         key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
         restore-keys: |
           ${{ runner.os }}-pip-
@@ -49,7 +49,7 @@ jobs:
       - name: Cache Python packages
         uses: actions/cache@v3
         with:
-          path: ~/.cache/pip
+          path: c:\users\runneradmin\appdata\local\pip
           key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip-
@@ -67,6 +67,7 @@ jobs:
           --collect-all "tokenizers" --collect-all "charset-normalizer" --collect-all "MarkupSafe" \
           --collect-all "numpy" --collect-all "pillow" --collect-all "PyYAML" \
           --collect-all "regex" --collect-all "safetensors" --collect-all "transformers" \
+          --icon "assets\icon.ico" \
           main.py
 
       - name: Upload EXE
