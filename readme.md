@@ -9,8 +9,8 @@
 1. **Клонируйте репозиторий:**
 
    ```bash
-   git clone <URL вашего репозитория>
-   cd ttpоML
+   git clone https://github.com/Bagi4-source/imageCaptioning.git
+   cd imageCaptioning
    ```
 
 2. **Создайте и активируйте виртуальное окружение:**
