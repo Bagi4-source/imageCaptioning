@@ -27,6 +27,7 @@ jobs:
         pip install -r requirements.txt
 
     - name: Create Executable
+      shell: bash
       run: |
         pyinstaller --noconfirm --onefile --windowed --add-data "model;model/" \
         --collect-all "torch" --collect-all "torchaudio" --collect-all "torchvision" \
